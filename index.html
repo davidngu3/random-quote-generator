@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>David's quote generator</title>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script> <!-- test scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- jquery from google CDN -->
+        <script src="app.js"></script> <!-- logic in javascript file -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="styles.css"> <!-- link css file-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  <!-- import font awesome-->
+        <link href="https://fonts.googleapis.com/css?family=Gelasio|Raleway" rel="stylesheet" type="text/css"> <!-- import google font -->
+        
+    </head>
+
+    <body class="container-fluid">
+        <div id="quote-box">
+            <div id="text">quote</div>
+            <div id="author">author</div>
+            <div id="buttons">
+                <a id="tweet-quote" class="btn btn-primary" href="#">
+                    <span>
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+                <button id="new-quote" onclick="newQuote()" class="btn btn-info">New Quote</button>
+            </div>
+        </div>
+    </bodyclass="container-fluid">
+</html>
+
+
+<!-- 
+Additional: Add a 'what do you think?' text input next to the tweet button which adds the comment to the tweet
+-->
