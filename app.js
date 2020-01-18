@@ -34,7 +34,7 @@ function newQuote() {
         1000,
         function() {
           $(this).animate({ opacity: 1}, 1000);
-          $('#text').html(randomQuote);
+          $('#text').html("<i class=\"fas fa-quote-left\"></i> " + randomQuote);
         }
       );
 
