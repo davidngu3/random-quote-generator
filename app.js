@@ -1,8 +1,15 @@
 $(document).ready(function() {
-    newQuote();  // on initial load, fetch and display random quote
+  preLoadImages(backgrounds); // preload images for faster transition times
+  newQuote();  // on initial load, fetch and display random quote
 
     
 });
+
+function preLoadImages(array) {
+  $(array).each(function(bg) {
+    var image = $('<img />').attr('src', './backgrounds/' + bg + '.jpg');
+  });
+} 
 
 let quotes = [
     ['A ship is safe in the harbor, but that\'s not what ships are for.', 'Unknown'],
