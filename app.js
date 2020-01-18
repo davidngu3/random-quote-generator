@@ -50,7 +50,7 @@ function newQuote() {
 
     // configure twitter button by url encoding
     let twitterUrl = "https://twitter.com/intent/tweet?hashtags=quotes&text=";
-    let encodedUrl = twitterUrl + randomQuote + " - " + randomAuthor;
+    let encodedUrl = twitterUrl + "\"" + randomQuote + "\"" + " - " + randomAuthor;
     $("#tweet-quote").prop("href", encodedUrl);
 
     return '';
