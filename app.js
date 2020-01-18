@@ -12,17 +12,41 @@ let quotes = [
     ['Don\'t do something permanently stupid when you\'re temporarily upset.', 'Unknown'],
     ['We judge ourselves by our intentions and others by their behaviour.', 'Stephen M.R. Covey'],
     ['Years of love have been forgot, in the hatred of a minute.', 'Edgar Allan Poe']
-]
+];
+
+let backgrounds = ['image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7'];
+
 
 function newQuote() {
+    // configure random background image
+    let randomImageIndex = Math.floor(Math.random() * backgrounds.length);
+    let imageURL = "url(./backgrounds/" + backgrounds[randomImageIndex] + ".jpg)";
+    $("body").css("background-image", imageURL); 
+      
     // get a random quote
     let randomIndex = Math.floor(Math.random() * quotes.length);
     let randomQuote = quotes[randomIndex][0];
     let randomAuthor = quotes[randomIndex][1];
     
-    // put random quote into quote and author box
-    $("#text").html(randomQuote);
-    $("#author").html("- " + randomAuthor);
+    // put random quote into quote and author box with smooth transitions
+    $("#text").animate(
+        { opacity: 0 },
+        1000,
+        function() {
+          $(this).animate({ opacity: 1}, 1000);
+          $('#text').html(randomQuote);
+        }
+      );
+
+    $("#author").animate(
+        { opacity: 0 },
+        1000,
+        function() {
+          $(this).animate({ opacity: 1}, 1000);
+          $('#author').html("- " + randomAuthor);
+        }
+    );
+
 
     // configure twitter button by url encoding
     let twitterUrl = "https://twitter.com/intent/tweet?hashtags=quotes&text=";
@@ -35,10 +59,3 @@ function newQuote() {
 
 
 
-
-/*
-<!-- 
-User Story #11: The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
-
--->
-*/
