@@ -11,7 +11,7 @@ body {
 
 #quote-box {
     margin: auto;
-    width: 40vw;
+    width: 70vmin;
     background-color: rgba(240, 248, 255, 0.4);
     border-radius: 10% 0;
     padding: 30px;
@@ -27,19 +27,19 @@ body {
 }
 
 #text {
-    font-size: 2vw;
+    font-size: 2em;
     font-family: 'Gelasio', sans-serif; /* Gelasio is imported google font, degrade to sans-serif */
 }
 
 #author {
     margin: 20px;
-    font-size: 1.5vw;
+    font-size: 1.6em;
     font-family: 'Raleway', sans-serif;
 }
 
 #buttons {
     width: 100%;
-    height: 60px;
+    height: 3em;
     margin: 10px;
     display: flex;
     flex-direction: row;
@@ -49,11 +49,11 @@ body {
 
 #tweet-quote {
     margin-left: 1.5vw;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     padding: 5px 9px;
 }
 
 #new-quote {
     margin-right: 1.5vw;
-    font-size: 1vw;
+    font-size: 1em;
 }
