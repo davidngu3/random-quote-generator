@@ -6,8 +6,9 @@ $(document).ready(function() {
 });
 
 function preLoadImages(array) {
-  $(array).each(function(bg) {
-    var image = $('<img />').attr('src', './backgrounds/' + bg + '.jpg');
+  array.map((bg) => {
+    var img = new Image();
+    img.src =  './backgrounds/' + bg + '.jpg';
   });
 } 
 
